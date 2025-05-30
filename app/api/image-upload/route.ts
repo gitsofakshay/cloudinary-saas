@@ -12,7 +12,7 @@ cloudinary.config({
 
 interface cloudinaryUploadResult {
     public_id: string,
-    [key: string] : any,
+    [key: string] : unknown,
 }
 
 export async function POST(request: NextRequest){
@@ -46,9 +46,8 @@ export async function POST(request: NextRequest){
 
         return NextResponse.json({publicId: result.public_id},{status: 200})
 
-
-    } catch (error:any) {
-        console.log("Upload images failed ",error)
-        return NextResponse.json({error: "Failed to upload images on cloudinary"},{status: 500})
+    } catch (error: unknown) {
+        console.log("Upload images failed ", error);
+        return NextResponse.json({error: "Failed to upload images on cloudinary"}, {status: 500});
     }
 }

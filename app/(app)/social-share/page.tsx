@@ -20,7 +20,7 @@ export default function SocialShare() {
   );
   const [isUploading, setIsUploading] = useState(false);
   const [isTransforming, setIsTransforming] = useState(false);
-  const imageRef = useRef<HTMLIFrameElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (uploadedImage) {
