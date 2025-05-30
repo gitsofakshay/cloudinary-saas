@@ -8,7 +8,6 @@ import { Video } from "@/types";
 export default function Home() {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   const fetchVideos = useCallback(async () => {
     try {
@@ -19,8 +18,7 @@ export default function Home() {
         throw new Error("Unexpected response format");
       }
     } catch (error) {
-      console.log(error);
-      setError("Failed to fetch video");
+      console.log(error);      
     } finally {
       setLoading(false);
     }
@@ -40,8 +38,7 @@ export default function Home() {
       link.click();
       document.body.removeChild(link);
     } catch (err) {
-      console.log(err);
-      setError("Failed to download file");
+      console.log(err);      
     }
   }, []);
 
