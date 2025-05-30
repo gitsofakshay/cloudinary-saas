@@ -17,16 +17,18 @@ export default clerkMiddleware(async (auth, req) => {
     const isAccessingDashboard = currentUrl.pathname === "/home"
     const isApiRequest = currentUrl.pathname.startsWith("/api")
 
+    //Redirect to the home page if user want to access / route
+    if (currentUrl.pathname === "/") {
+            return NextResponse.redirect(new URL("/home",req.url))
+    }
+
     if(userId && isPublicRoute(req) && !isAccessingDashboard){
         return NextResponse.redirect(new URL("/home", req.url))
     }
 
     //not logged in
     if (!userId) {
-        //If user is not logged in and trying to access a protected route
-        if (currentUrl.pathname === "/") {
-            return NextResponse.redirect(new URL("/home",req.url))
-        }
+        //If user is not logged in and trying to access a protected route        
         if (!isPublicApiRoute(req) && !isPublicRoute(req)) {
             return NextResponse.redirect(new URL("/sign-in",req.url))
         }
