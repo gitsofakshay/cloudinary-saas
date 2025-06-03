@@ -65,16 +65,19 @@ This project is a cloud-based media transformation platform built with **Next.js
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](./public/screenshots/user-home.png)
+![Home](./public/screenshorts/user-home.PNG)
+
+### 🏠 Sign-in Page
+![Signin](./public/screenshorts/signin.PNG)
 
 ### 📤 Upload Interface
-![Upload](./public/screenshots/video-upload.png)
+![Upload](./public/screenshorts/video-upload.PNG)
 
 ### 🎨 Transformation Result
-![Transformation](./public/screenshots/social-share.png)
+![Transformation](./public/screenshorts/social-share.PNG)
 
 ### 📁 Public Media Library
-![Library](./public/screenshots/public-home.png)
+![Library](./public/screenshorts/public-home.PNG)
 
 
 ---
