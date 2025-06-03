@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 Cloudinary SaaS Media Transformation Platform
 
-## Getting Started
+A full-stack SaaS web application that enables users to upload and transform media (images & videos) optimized for various social media platforms like Facebook, Instagram, and Twitter.
 
-First, run the development server:
+> 🧑‍💻 Built by [Akshay Raj Kushwaha](https://github.com/gitsofakshay)
+
+🔗 **Live Demo**: [cloudinary-saas-delta.vercel.app](https://cloudinary-saas-delta.vercel.app/home)
+
+---
+
+## 🚀 Overview
+
+This project is a cloud-based media transformation platform built with **Next.js (TypeScript)** and **Cloudinary**, offering seamless **image and video optimization** for different social media formats. Users can upload media, apply transformations, and download platform-specific outputs.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js (TypeScript), Tailwind CSS, DaisyUI
+- **Backend**: Node.js, Prisma ORM
+- **Database**: PostgreSQL
+- **Media Services**: Cloudinary (Image & Video APIs)
+- **Authentication**: Clerk Auth
+- **Deployment**: Vercel
+
+---
+
+## 🎯 Key Features
+
+### 🔐 User Authentication
+- Secure and seamless login/signup using **Clerk Auth**.
+
+### 🖼️ Image Upload & Transformation
+- Upload images and transform them for:
+  - Facebook Posts
+  - Instagram Square Posts
+  - Twitter Banners
+- Powered by **Cloudinary Image Transformation APIs**.
+
+### 🎥 Video Upload & Compression
+- Upload large videos.
+- Download compressed versions using **Cloudinary Video tools**.
+
+### ☁️ Public Media Library
+- All uploaded media is publicly accessible.
+- Allows easy **sharing and collaboration**.
+
+### 📊 PostgreSQL + Prisma ORM
+- Robust data management for media metadata and user accounts.
+
+### 💅 Modern UI
+- Responsive and accessible UI built using **Tailwind CSS** and **DaisyUI**.
+
+---
+
+## 🔧 In Progress
+
+- ✅ Custom Social Media Cards:
+  - LinkedIn OG cards
+  - Twitter cards
+- 🔜 Scheduled media posts and metadata tagging
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home](./public/screenshots/user-home.png)
+
+### 📤 Upload Interface
+![Upload](./public/screenshots/video-upload.png)
+
+### 🎨 Transformation Result
+![Transformation](./public/screenshots/social-share.png)
+
+### 📁 Public Media Library
+![Library](./public/screenshots/public-home.png)
+
+
+---
+
+## 📦 Installation (Optional for Developers)
 
 ```bash
+# Clone the repo
+git clone https://github.com/your-github/cloudinary-saas.git
+
+# Install dependencies
+cd cloudinary-saas
+npm install
+
+# Create .env file and add your credentials
+cp .env.example .env.local
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
